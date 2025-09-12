@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class University {
+public:
+    void show() {
+        cout << "This is University" << endl;
+    }
+};
+
+class student : virtual public University {
+public:
+    void display() {
+        cout << "Hello I am a Student" << endl;
+    }
+};
+
+class department : virtual public University, public student {
+public:
+    void function() {
+        cout << "This is department" << endl;
+    }
+};
+
+int main() {
+    student ob;
+    department ob2;
+    
+    ob2.show();       // Now this works without ambiguity
+    ob2.display();
+    ob2.function();
+    
+    return 0;
+}
