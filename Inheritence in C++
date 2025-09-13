@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class Animal
+{
+    public:
+    void show()
+    {
+        cout<<"Categories of Animal"<<endl;
+    }
+};
+class Dog: public Animal
+{
+    public:
+    void display()
+    {
+       cout<<"This is Dog"<<endl; 
+    }
+};
+int main()
+{
+Dog ob;
+ob.show();
+ob.display();
+return 0;
+}
