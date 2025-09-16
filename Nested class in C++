@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+class outer{
+    public:
+    void outerfunction() 
+    {
+        cout<<"This is outer function"<<endl;
+    }
+class inner {
+    public:
+    void innerfunction()
+    {
+        cout<<"This is inner function";
+    }
+};
+};
+int main()
+{
+    outer outerob;
+    outerob.outerfunction();
+    outer::  inner innerob;
+    innerob.innerfunction();
+return 0;
+}
