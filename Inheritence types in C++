@@ -2,7 +2,7 @@
 using namespace std;
 
 class Vehicle {
-public:
++public:
     Vehicle() {
         cout << "This is a Vehicle"<< endl;
     }
