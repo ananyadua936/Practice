@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class school
+{
+    public:
+    school()
+    {
+        cout<<"This is constructor"<<endl;
+    }
+    ~school()
+    {
+        cout<<"This is destructor"<<endl;
+    }
+};
+int main()
+{
+    school ob;
+    return 0;
+}
