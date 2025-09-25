@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+class student
+{
+    int age;
+    public:
+    student(int a)
+    {
+    age=a;
+}
+void show()
+{
+    cout<<age;
+}
+    void add(student)
+
+    {
+        cout<<age++;
+    }
+
+};
+int main()
+{
+    student s1(10);
+    s1.show();
+    s1.add(s1);
+    s1.show();
+return 0;
+    
+}
