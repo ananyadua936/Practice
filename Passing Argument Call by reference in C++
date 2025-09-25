@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+class student
+{
+    int age;
+    public:
+void setdata(int a)
+{
+    age =a;
+}
+ void display()
+ {
+     cout<<age;
+ }
+void add(student&S)
+    {
+        cout<<S.age++;
+    }
+
+};
+int main()
+{
+    student ob;
+    ob.setdata(10);
+    ob.display();
+    ob.add(ob);
+    ob.display();
+return 0;
+    
+}
