@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+class Vehicle
+{
+    protected:
+    string brand;
+    string model;
+public:
+ virtual void rentalcost()=0;
+};
+class Car: virtual public Vehicle
+{
+    public:
+    int days;
+    int ratePerDay;
+    void input(int a, int b)
+    {
+        days=a;
+        ratePerDay=b;
+    }
+void rentalcost() override
+{
+    cout<<"Car Rent:"<<(days*ratePerDay)<<endl;
+}
+};
+class Bike:virtual public Vehicle
+{
+    public:
+    int hours;
+    int ratePerHour;
+    void input(int a,int b)
+    {
+    hours=a;
+    ratePerHour=b;
+    }
+    void rentalcost() override
+    {
+        cout<<"Bike Rent:"<<(hours*ratePerHour)<<endl;
+    }
+};
+ class Truck:virtual public Vehicle
+ {
+     public:
+     int distance;
+     int ratePerKm;
+     void input(int a,int b)
+     {
+         distance=a;
+         ratePerKm=b;
+     }
+     void rentalcost() override
+     {
+         cout<<"Rent of Truck is:"<<(distance*ratePerKm)<<endl;
+     }
+ };
+ int main()
+ {
+     Vehicle*p;
+     Car C;
+     Bike B;
+     Truck T;
+     C.input(20,30);
+     B.input(40,25);
+     T.input(25,60);
+     
+     p=&C;
+     p->rentalcost();
+     
+     p=&B;
+     p->rentalcost();
+     
+     p=&T;
+     p->rentalcost();
+     return 0;
+ }
