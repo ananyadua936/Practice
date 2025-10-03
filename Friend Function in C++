@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+class A{
+     public:
+     int a;
+     public:
+     friend void show(A ob);
+};
+void show(A ob)
+     {
+         cout<<ob.a;
+     }
+    int main()
+    {
+        A S1;
+        show (S1);
+        return 0;
+    }
