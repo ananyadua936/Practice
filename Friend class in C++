@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class A{
+     private:
+     int a;
+     public:
+     A(int x)
+     {
+         a=x;
+     }
+     friend class B;
+};
+class B
+{
+    private:
+    public:
+    
+void show(A ob)
+     {
+         cout<<ob.a;
+     }
+};
+    int main()
+    {
+        A ob(10);
+        B S1;
+        S1.show(ob);
+        return 0;
+    }
