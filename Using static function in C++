@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+class myclass
+{
+    public:
+    static void display();
+};
+    void myclass::display()
+    {
+        cout<<"static function called \n";
+    }
+int main()
+{
+    myclass:: display();
+    return 0;
+}
