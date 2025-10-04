@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+class student
+{
+    public:
+    static int x;
+};
+    int student:: x=10;
+int main()
+{
+    student::x=10;
+    cout<<student::x;
+    return 0;
+}
