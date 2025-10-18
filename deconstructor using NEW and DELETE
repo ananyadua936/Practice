@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+class MyClass {
+private:
+int* data;
+
+public:
+    MyClass(int value) {
+        data = new int;
+        *data = value;
+        cout << *data << endl;
+    ~MyClass() {
+      
+        delete data;  
+        cout << "Destructor: Memory deallocated";
+    }
+};
+
+int main() {
+    MyClass obj1(10);
+    return 0;
+}
