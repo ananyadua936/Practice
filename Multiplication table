@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    // Change here to change
+    int range = 11;
+    for (int i = 1; i <= range; ++i)
+        cout << n << " * " << i << " = " << n * i << endl;
+
+    return 0;
+}
