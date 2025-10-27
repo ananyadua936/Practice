@@ -1,0 +1,10 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+  float P = 2, R = 2, T = 2;
+  float SI = (P * T * R) / 100;
+  cout << "Simple Interest = " << SI;
+
+    return 0;
+}
