@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+class Invalid Age {
+public:
+    string message; 
+    Invalid Age(string msg) {    
+        message = msg;}
+};
+int main() {
+  int age;
+    cout << "Enter your age: ";
+  cin >> age;
+ try {
+ if (age < 18) {
+            throw Invalid Age("Age must be 18 or above to vote!"); }
+        cout << "You are eligible to vote." <<endl; }
+    catch (Invalid Age e) {
+        cout << "Exception caught: " << e.message << endl; }
+  return 0;
+}<img width="891" height="1150" alt="image" src="https://github.com/user-attachments/assets/d18b9ae4-97c6-4029-803c-7c048746c257" />
