@@ -1,0 +1,86 @@
+#include <iostream>
+using namespace std;
+
+// Base Class
+class CurrencyConverter {
+public:
+    virtual void convert(double amount) = 0;  // pure virtual function
+};
+
+// Derived Class 1: USD to INR
+class USDToINR : public CurrencyConverter {
+    double rate = 83.2;
+public:
+    void convert(double amount) {
+        cout << amount << " USD = " << (amount * rate) << " INR" << endl;
+    }
+};
+
+//  Derived Class 2: EUR to INR
+class EURToINR : public CurrencyConverter {
+    double rate = 90.5;
+public:
+    void convert(double amount){
+        cout << amount << " EUR = " << (amount * rate) << " INR" << endl;
+    }
+};
+
+// Derived Class 3: GBP to INR
+class GBPToINR : public CurrencyConverter {
+    double rate = 104.3;
+public:
+    void convert(double amount) override {
+        cout << amount << " GBP = " << (amount * rate) << " INR" << endl;
+    }
+};
+
+// Main Function
+int main() {
+    CurrencyConverter *converter; // Base class pointer
+    do {
+        int choice;
+        double amount;
+        cout << "\n==============================\n";
+        cout << "      Currency Converter\n";
+        cout << "==============================\n";
+        
+        cout << "1. USD to INR\n";
+        cout << "2. EUR to INR\n";
+        cout << "3. GBP to INR\n";
+        cout << "4. Exit\n";
+
+        cout << "Enter choice: ";
+        cin >> choice;
+
+        cout << "Enter amount: ";
+        cin >> amount;
+
+        // Runtime polymorphism in action
+        if (choice == 1) {
+            USDToINR obj;
+            converter = &obj;
+            converter->convert(amount);
+        } 
+        else if (choice == 2) {
+            EURToINR obj;
+            converter = &obj;
+            converter->convert(amount);
+        } 
+        else if (choice == 3) {
+            GBPToINR obj;
+            converter = &obj;
+            converter->convert(amount);
+        } 
+        else if (choice == 4) {
+            cout << "\nThank you for using the converter! \n";
+            break; // Exit the loop
+        }
+        else {
+            cout << " Invalid choice! Please try again.\n";
+        }
+        
+
+    } while (true);  // infinite loop until user chooses exit
+
+    return 0;
+}
