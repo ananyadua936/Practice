@@ -1,0 +1,48 @@
+#inclyde<iostrem>
+using namespace std;
+template <typename T>
+T findMin(T arr[], int size) {
+    T minVal = arr[0]; // Assume first element is the minimum
+    
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < minVal) {
+            minVal = arr[i];
+        }
+    }    
+    return minVal;
+}
+int main() {
+    // Integer array
+    int arr[] = {15, 7, 23, 4, 18, 9, 12};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    
+    cout << "Array elements: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    
+    cout << "\nMinimum value: " << findMin(arr, size) << endl;
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    return 0;
+}![Uploading image.png…]()
