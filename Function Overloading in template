@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+// Template 1: Two parameters of same type
+template <typename T>
+T add(T a, T b) {
+    cout << "Template 1 (two params): ";
+    return a + b;
+}
+template <typename T>
+T add(T a, T b, T c) {
+    cout << "Template 2 (three params): ";
+    return a + b + c;
+}
+
+int main() {
+    cout << add(5, 10) << endl;       
+    cout << add(1, 2, 3) << endl;     
+    
+    return 0;
+}
+<img width="666" height="482" alt="image" src="https://github.com/user-attachments/assets/28f758da-9431-4c39-afe9-e426d28741e0" />
+
