@@ -1,0 +1,21 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<string> cart;
+
+    // Adding items to the cart
+    cart.push_back("Milk");
+    cart.push_back("Bread");
+    cart.push_back("Eggs");
+
+    // Displaying items
+    cout << "Shopping Cart:\n";
+    for (string item : cart) {
+        cout << "- " << item << endl;
+ }
+
+    return 0;
+}
+
