@@ -1,0 +1,20 @@
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    // Creating and initializing a map
+    map<string, int> fruitPrices = {
+        {"Apple", 100},
+        {"Banana", 40},
+        {"Mango", 70}
+    };
+
+    // Accessing elements using iterator
+    cout << "Fruit Prices:\n";
+    for (map<string, int>::iterator it = fruitPrices.begin(); it != fruitPrices.end(); ++it) {
+        cout << it->first << " costs " << it->second << " rupees.\n";
+    }
+
+    return 0;
+}<img width="894" height="624" alt="image" src="https://github.com/user-attachments/assets/9abe9b23-7996-4536-8a20-7de0610e0908" />
