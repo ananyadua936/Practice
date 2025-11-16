@@ -1,0 +1,16 @@
+#include <iostream>
+#include <memory>
+using namespace std;
+
+int main() {
+    int *nptr;
+    
+    // Allocate and initialize memory
+    nptr = new int(6);
+
+    // Print the value
+    cout << *nptr << endl;
+
+    cout << nptr;
+    return 0;
+}
